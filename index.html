@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Card App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!-- Header Bar -->
+    <header class="header-bar">
+        <a href="https://kay-who-codes.github.io/Question-Cards/" class="header-link">Question Cards</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown()">More Apps</button>
+            <div class="dropdown-content" id="dropdownMenu">
+              <a href="https://kay-who-codes.github.io/Cards-Against-Humanity/">⬜ Cards Against Humanity</a>
+              <a href="https://kay-who-codes.github.io/Ultimate-Drinking-Cards">🍻 Ultimate Drinking Cards</a>
+              <a href="https://kay-who-codes.github.io/Kings-Cup/">🍺 Kings Cup</a>
+              <a href="https://kay-who-codes.github.io/Daily-Comic-Strips/">🗞️ Comic Strips</a>
+              <a href="https://kay-who-codes.github.io/Soundboard/">🔊 Soundboard</a>
+              <a href="https://kay-who-codes.github.io/Skint-Countdown/">⌛ Skint Countdown</a>
+              <a href="https://kay-who-codes.github.io/Song-Inspirator/">🎶 Song Inspirator</a>
+              <a href="https://kay-who-codes.github.io/Random-Numbers/">🔢 Random Number Generator</a>
+              <a href="https://kay-who-codes.github.io/Coinflip/">🪙 Coinflip</a>
+            </div>
+          </div>
+        </header>
+    <div class="app-container">
+        <div class="card" id="questionCard" aria-label="Interactive question card">
+            <div class="card-front">
+                <div class="question" id="questionText">Question Cards</div>
+                <div class="category" id="categoryText"></div>
+            </div>
+            <div class="card-back">
+                <div class="question" id="questionTextBack">Question Cards</div>
+                <div class="category" id="categoryTextBack"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View All Button Outside app-container -->
+    <button id="viewAllBtn">View All</button>
+
+    <div id="viewAllContainer" class="view-all-container">
+        <h2>All Questions</h2>
+        <div id="questionsList"></div>
+    </div>
+
+    <audio id="flipSound" src="flip.mp3"></audio>
+</body>
+
+<footer>
+    <p>
+      Made by 
+      <a href="https://linktr.ee/kaywhocreates" class="footer-link" target="_blank" rel="noopener noreferrer">
+        Kay 🧡
+      </a>
+    </p>
+  </footer>
+
+</html>
