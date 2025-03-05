@@ -3,35 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Card App</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="app.js"></script>
+    <title>❓ Question Cards</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+
 </head>
 <body>
-    <!-- Header Bar -->
-    <header class="header-bar">
-        <a href="https://github.com/kay-who-codes/Question-Cards/" class="header-link">Question Cards</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdown()">More Apps</button>
-            <div class="dropdown-content" id="dropdownMenu">
-                <a href="https://kay-who-codes.github.io/Cards-Against-Humanity/">⬜ Cards Against Humanity</a>
-                <a href="https://kay-who-codes.github.io/Ultimate-Drinking-Cards">🍻 Ultimate Drinking Cards</a>
-                <a href="https://kay-who-codes.github.io/Kings-Cup/">🍺 Kings Cup</a>
-                <a href="https://kay-who-codes.github.io/Question-Cards/">❓ Question Cards</a>
-                <a href="https://kay-who-codes.github.io/Daily-Comic-Strips/">🗞️ Comic Strips</a>
-                <a href="https://kay-who-codes.github.io/Soundboard/">🔊 Soundboard</a>
-                <a href="https://kay-who-codes.github.io/Greek-Quiz/">🇬🇷 Greek Quiz</a>
-                <a href="https://kay-who-codes.github.io/HTML-Displayer/">👁️ HTML Viewer</a>
-                <a href="https://kay-who-codes.github.io/Calendar-Holiday-Countdown/">📅 Calendar Countdown</a>
-                <a href="https://kay-who-codes.github.io/Skint-Countdown/">⌛ Skint Countdown</a>
-                <a href="https://kay-who-codes.github.io/Song-Inspirator/">🎶 Song Inspirator</a>
-                <a href="https://kay-who-codes.github.io/Bible-Completion-Calculator/">✝️ Bible Completion Calculator</a>
-                <a href="https://kay-who-codes.github.io/Random-Bible-Verse/">✝️ Random Bible Verses</a>
-                <a href="https://kay-who-codes.github.io/Random-Numbers/">🔢 Random Number Generator</a>
-                <a href="https://kay-who-codes.github.io/Coinflip/">🪙 Coinflip</a>
-            </div>
-          </div>
-        </header>
+    <div id="header"></div>
     <div class="app-container">
         <div class="card" id="questionCard" aria-label="Interactive question card">
             <div class="card-front">
@@ -54,7 +32,7 @@
         <div id="questionsList"></div>
     </div>
 
-    <audio id="flipSound" src="flip.mp3"></audio>
+    <audio id="flipSound" src="Assets/flip.mp3"></audio>
 </body>
 
 <footer>
@@ -65,5 +43,6 @@
       </a>
     </p>
   </footer>
-
+  <script src="js/app.js"></script>
+  <script src="js/header.js"></script>
 </html>

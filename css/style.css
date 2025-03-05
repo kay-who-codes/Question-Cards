@@ -1,0 +1,237 @@
+/* Header styles */
+.header-bar {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adds space on left and right */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .header-link {
+    color: #535353;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px
+  
+  }
+  
+  .header-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dropdown menu styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: #202020;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px
+  }
+  
+  .dropbtn:hover {
+    background-color: #333;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #535353;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    min-width: 200px;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #535353;
+  }
+  
+  .dropdown.show .dropdown-content {
+    display: block;
+  }
+
+    /* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #131313;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    flex-direction: column;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #262626;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.card-front {
+    background-color: #262626;
+}
+
+.card-back {
+    background-color: #262626;
+    transform: rotateY(180deg);
+}
+
+.question {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.category {
+    font-size: 1rem;
+    text-align: center;
+    color: #777;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#viewAllBtn {
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #0000;
+    color: rgb(62, 62, 62);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#viewAllBtn:hover {
+  text-decoration: underline;
+}
+
+.view-all-container {
+    display: none;
+    position: fixed; /* Position fixed to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Take full width */
+    height: 100vh; /* Take full height */
+    background-color: #131313; /* Dark background */
+    color: white;
+    z-index: 10; /* Ensure it's on top of other content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    padding: 20px;
+}
+
+.view-all-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 20px space between each question-category pair */
+    width: 100%;
+}
+
+.question-item {
+    padding: 15px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.question-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.category-text {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* This style makes the background dim when 'View All' is shown */
+body.view-all-active .app-container {
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 4px;
+    font-size: 0.85rem;
+    color: #464646;
+    text-align: center;
+}
+
+.footer-link {
+  color: rgb(255, 102, 0);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for better user feedback */
+}
